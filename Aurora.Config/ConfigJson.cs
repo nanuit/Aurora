@@ -53,7 +53,9 @@ namespace Aurora.Configs
             {
                 using (var stream = File.CreateText(new Uri(ConfigFilePath).LocalPath))
                 {
-                    JsonSerializer.SerializeToStream<T>(Configuration, stream.BaseStream);
+                    string json = JsonSerializer.SerializeToString<T>(Configuration);
+                    json.IndentJson();
+                    stream.Write(json);
                 }
             }
             catch (Exception ex)
