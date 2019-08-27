@@ -41,7 +41,7 @@ namespace Aurora.Configs
         Dynamic
     }
     public class Config
-    {
+    {            
         #region Static Members
         protected readonly Logger Log = LogManager.GetCurrentClassLogger();
         #endregion
@@ -55,7 +55,7 @@ namespace Aurora.Configs
         /// Encryption application identifier
         /// </summary>
         /// <returns>application Identifier for encryption</returns>
-        public string AppIdentifier { get; set; }
+        public static string AppIdentifier { get; set; }
 
         /// <summary>
         /// specifies the config file containing the Configuration. If omited one of the other methods to identify the config file is used
@@ -69,15 +69,14 @@ namespace Aurora.Configs
         public string EnvironmentVariable { get; set; }
         #endregion
         #region Public Methods  
-        public string Decode(string cipher)
+        public static  string Decode(string cipher)
         {
             return (RijndaelCrypt.Decrypt(cipher, AppIdentifier));
         }
-        public string Encode(string userId, string password)
+        public static string Encode(string userId, string password)
         {
             return (RijndaelCrypt.Encrypt(password, AppIdentifier));
         }
-
         /// <summary>
         /// 
         /// </summary>
@@ -93,7 +92,7 @@ namespace Aurora.Configs
                 switch (type)
                 {
                     case ConfigType.Executeable:
-                        ConfigFilePath = GetConfigFilefromExecutable(configLocation);
+                        ConfigFilePath = GetConfigFilefromExecutable(configFilename);
                         break;
                     case ConfigType.RoamingProfile:
                     case ConfigType.LocalProfile:
@@ -134,6 +133,7 @@ namespace Aurora.Configs
             finally
             {
                 Log.Trace($"configFile to use {ConfigFilePath}");
+                //Configuration = LoadConfiguration();
             }
             return (ConfigFilePath);
         }
@@ -149,6 +149,7 @@ namespace Aurora.Configs
         public Config(ConfigType type, string configLocation, string configFilename)
         {
             SetConfigFile(type, configLocation, configFilename);
+            
         }
         #endregion
         #region Private Methods
