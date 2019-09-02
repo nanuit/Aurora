@@ -159,12 +159,12 @@ namespace Aurora.Configs
         /// <returns></returns>
         private string GetConfigFilefromExecutable(string fileName)
         {
-            Uri executeable = new Uri(Assembly.GetExecutingAssembly().GetName().CodeBase);
+            Uri executeable = new Uri(Assembly.GetEntryAssembly().GetName().CodeBase);
             string executeableDirectory = Path.GetDirectoryName(executeable.LocalPath);
             string retVal = string.Empty;
             
             if (string.IsNullOrEmpty(fileName))
-                retVal = executeable.ToString() + ".config";
+                retVal = executeable.LocalPath + ".config";
             else
                 retVal = Path.Combine(executeableDirectory, fileName);
 

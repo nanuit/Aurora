@@ -6,13 +6,31 @@ using ServiceStack.Text;
 namespace Aurora.Configs
 {           
     public class ConfigJson<T> : Config where T : new()
-    {                                                  
+    {
+        #region Private Members
+
+        private T m_Configuration;
+        
+
+        #endregion
         #region Properties
-        public T Configuration { get; private set; }
+        public T Configuration
+        {
+            get => m_Configuration;
+            set { m_Configuration = value; Save(); } 
+        }
         #endregion
         #region To life and die in starlight
-        public ConfigJson(ConfigType type, string configLocation) : base(type, configLocation) { }
-        public ConfigJson(ConfigType type, string configLocation, string configFile) : base(type, configLocation, configFile) { }
+
+        public ConfigJson(ConfigType type, string configLocation) : base(type, configLocation)
+        {
+            Configuration = Load();
+        }
+
+        public ConfigJson(ConfigType type, string configLocation, string configFile) : base(type, configLocation, configFile)
+        {
+            Configuration = Load();
+        }
         #endregion
         #region Public Methods          
         public T Load()
@@ -53,7 +71,7 @@ namespace Aurora.Configs
             {
                 using (var stream = File.CreateText(new Uri(ConfigFilePath).LocalPath))
                 {
-                    JsonSerializer.SerializeToStream<T>(Configuration, stream.BaseStream);
+                    stream.Write(JsonSerializer.SerializeToString<T>(Configuration).IndentJson());
                 }
             }
             catch (Exception ex)

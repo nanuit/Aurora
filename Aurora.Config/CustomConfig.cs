@@ -108,7 +108,7 @@ namespace Aurora.Configs
 
                 if (!File.Exists(fullConfigFile))
                 {
-                    throw (new Exception("Safe.Config File not found"));
+                    throw (new Exception($"{fullConfigFile} file not found"));
                 }
                 ConfigFileToUse = fullConfigFile;
                 ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap
