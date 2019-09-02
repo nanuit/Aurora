@@ -79,7 +79,7 @@ namespace Aurora.Configs
         }
         #endregion
 
-        #region 
+        #region Private Methods
         private void LoadConfigurationFile()                                                                           
         {
             if (File.Exists(ConfigFilePath))
