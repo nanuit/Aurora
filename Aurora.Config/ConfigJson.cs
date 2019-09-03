@@ -8,7 +8,7 @@ namespace Aurora.Configs
     public class ConfigJson<T> : Config where T : new()
     {                                                  
         #region Properties
-        public T Configuration { get; private set; }
+        public T Configuration { get; set; }
         #endregion
         #region To life and die in starlight
         public ConfigJson(ConfigType type, string configLocation) : base(type, configLocation) { }
@@ -54,7 +54,7 @@ namespace Aurora.Configs
                 using (var stream = File.CreateText(new Uri(ConfigFilePath).LocalPath))
                 {
                     string json = JsonSerializer.SerializeToString<T>(Configuration);
-                    json.IndentJson();
+                    json = json.IndentJson();
                     stream.Write(json);
                 }
             }
