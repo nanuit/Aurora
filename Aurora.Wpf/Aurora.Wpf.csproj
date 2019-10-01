@@ -50,10 +50,14 @@
     <Compile Include="Device\DeviceData.cs" />
     <Compile Include="Device\DeviceMonitor.cs" />
     <Compile Include="Device\DeviceNotification.cs" />
+    <Compile Include="EnumerationExtension.cs" />
     <Compile Include="ExtendedDataGrid.cs" />
     <Compile Include="MessageEx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="package.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
