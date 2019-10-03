@@ -58,13 +58,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="package.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Aurora.Crypt\Aurora.Crypt.csproj">
       <Project>{968ff477-ae9f-400e-a91c-1489c0e30aec}</Project>
       <Name>Aurora.Crypt</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="package.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
