@@ -11,7 +11,7 @@
     <iconUrl>https://github.com/nanuit/Aurora/blob/master/sunrise.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>NamePipe classes added</releaseNotes>
+    <releaseNotes>Initial package.</releaseNotes>
     <copyright>$copyright$</copyright>
     <tags></tags>
   </metadata>
