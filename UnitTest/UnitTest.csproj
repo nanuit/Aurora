@@ -51,12 +51,17 @@
   <ItemGroup>
     <Compile Include="AuroraIOTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AuroraConfigsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Aurora.Configs\Aurora.Configs.csproj">
+      <Project>{C0637CD4-2EF8-4A97-9851-7C95B14732ED}</Project>
+      <Name>Aurora.Configs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Aurora.IO\Aurora.IO.csproj">
       <Project>{49d9527d-cc33-4d6b-b634-326adaf6e3fb}</Project>
       <Name>Aurora.IO</Name>

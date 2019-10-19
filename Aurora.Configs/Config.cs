@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using System.Security.Permissions;
 using Aurora.Crypt;
 using NLog;
 
@@ -160,7 +161,14 @@ namespace Aurora.Configs
         /// <returns></returns>
         private string GetConfigFilefromExecutable(string fileName)
         {
-            Uri executeable = new Uri(Assembly.GetEntryAssembly().GetName().CodeBase);
+            Assembly rentyAss = Assembly.GetEntryAssembly();
+            
+            if (rentyAss == null)
+                rentyAss = Assembly.GetCallingAssembly();
+            if (rentyAss == null)
+                return (null);
+
+            Uri executeable = new Uri(rentyAss.GetName().CodeBase);
             string executeableDirectory = Path.GetDirectoryName(executeable.LocalPath);
             string retVal = string.Empty;
             
@@ -213,5 +221,6 @@ namespace Aurora.Configs
             return (configFilePath);
         }
         #endregion
+
     }
 }

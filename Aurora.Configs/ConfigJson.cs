@@ -3,6 +3,7 @@ using System.IO;
 using System.Reflection;
 using ServiceStack.Text;
 
+
 namespace Aurora.Configs
 {           
     public class ConfigJson<T> : Config where T : new()
@@ -22,7 +23,7 @@ namespace Aurora.Configs
                 if (File.Exists(ConfigFilePath))
                 {
                     string config = File.ReadAllText(ConfigFilePath);
-                    Configuration = JsonSerializer.DeserializeFromString<T>(config);
+                    Configuration = ServiceStack.Text.JsonSerializer.DeserializeFromString<T>(config);
                 }
             }
             catch (Exception ex)

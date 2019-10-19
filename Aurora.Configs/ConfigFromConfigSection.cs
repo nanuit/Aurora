@@ -25,7 +25,7 @@ namespace Aurora.Configs
         #endregion             
         #region Private Members              
         
-        private string m_SectionName;
+        //private string m_SectionName;
         #endregion
         #region Public Methods          
         public CustomConfigSection LoadSection(string sectionName)
