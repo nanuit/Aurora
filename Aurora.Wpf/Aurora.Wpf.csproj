@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoScrollListBox.cs" />
+    <Compile Include="Controls\TreeControl\TreeControl.cs" />
+    <Compile Include="Controls\TreeControl\TreeItem.cs" />
     <Compile Include="Device\DeviceData.cs" />
     <Compile Include="Device\DeviceMonitor.cs" />
     <Compile Include="Device\DeviceNotification.cs" />
@@ -60,5 +62,6 @@
   <ItemGroup>
     <None Include="package.nuspec" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
