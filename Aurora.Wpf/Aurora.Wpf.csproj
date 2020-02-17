@@ -47,11 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoScrollListBox.cs" />
-    <Compile Include="Controls\Font\FontSelect.xaml.cs">
-      <DependentUpon>FontSelect.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Font\ZoomBox.xaml.cs">
-      <DependentUpon>ZoomBox.xaml</DependentUpon>
+    <Compile Include="Controls\Numeric\NumericUpDown.xaml.cs">
+      <DependentUpon>NumericUpDown.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TreeControl\TreeControl.cs" />
     <Compile Include="Controls\TreeControl\TreeItem.cs" />
@@ -70,15 +67,13 @@
     <None Include="package.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\Font\FontSelect.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Controls\Numeric\NumericUpDown.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Font\ZoomBox.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controls\Numeric\Images\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

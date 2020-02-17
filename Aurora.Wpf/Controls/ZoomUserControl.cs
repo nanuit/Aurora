@@ -28,20 +28,37 @@ namespace Aurora.Wpf.Controls
 
             // We'll need a DoubleAnimation object to drive
             // the ScaleX and ScaleY properties.
-
-            DoubleAnimation animator = new DoubleAnimation()
+            if (Mode)
             {
-                Duration = new Duration(TimeSpan.FromMilliseconds(600)),
-            };
-            if (e.Delta > 0)
-                m_ScaleFactor += 0.1f;
+                DoubleAnimation animator = new DoubleAnimation()
+                {
+                    Duration = new Duration(TimeSpan.FromMilliseconds(600)),
+                };
+                if (e.Delta > 0)
+                    m_ScaleFactor += 0.1f;
+                else
+                    m_ScaleFactor -= 0.1f;
+
+                animator.To = m_ScaleFactor;
+                scaler.BeginAnimation(ScaleTransform.ScaleXProperty, animator);
+                scaler.BeginAnimation(ScaleTransform.ScaleYProperty, animator);
+            }
             else
-                m_ScaleFactor -= 0.1f;
+            {
+                if (e.Delta > 0)
+                    FontSize ++;
+                else
+                    FontSize = Math.Max(FontSize - 1, 1);
 
-            animator.To = m_ScaleFactor;
-            scaler.BeginAnimation(ScaleTransform.ScaleXProperty, animator);
-            scaler.BeginAnimation(ScaleTransform.ScaleYProperty, animator);
-
+            }
         }
+        public static readonly DependencyProperty ModeProperty =
+            DependencyProperty.Register("Mode", typeof(bool), typeof(ZoomUserControl), new UIPropertyMetadata(false));
+        public bool Mode
+        {
+            get => (bool)GetValue(ModeProperty);
+            set => SetValue(ModeProperty, value);
+        }
+
     }
 }
