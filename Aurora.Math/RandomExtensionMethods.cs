@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Helper.Misc
+namespace Aurora.Math
 {
     public static class RandomExtensionMethods
     {
