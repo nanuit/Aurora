@@ -4,3 +4,6 @@ nuget pack Aurora.Crypt.Forms\Aurora.Crypt.Forms.csproj -OutputDirectory ./NuPkg
 nuget pack Aurora.IO\Aurora.IO.csproj -OutputDirectory ./NuPkg -Properties Configuration=Release
 nuget pack Aurora.Wpf\Aurora.Wpf.csproj -OutputDirectory ./NuPkg -Properties Configuration=Release
 nuget pack Aurora.Math\Aurora.Math.csproj -OutputDirectory ./NuPkg -Properties Configuration=Release
+nuget pack Aurora.Misc\Aurora.Misc.csproj -OutputDirectory ./NuPkg -Properties Configuration=Release
+nuget pack Aurora.SignalR\Aurora.SignalR.csproj -OutputDirectory ./NuPkg -Properties Configuration=Release
+nuget pack Aurora.Web\Aurora.Web.csproj -OutputDirectory ./NuPkg -Properties Configuration=Release
