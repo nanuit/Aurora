@@ -23,12 +23,12 @@ namespace Aurora.Wpf.Device
         #endregion
         #region Private members
 
-        private DeviceNotification.DBTDeviceType m_DeviceType;
+        private DeviceNotification.DbtDeviceType m_DeviceType;
         private bool m_FilterByType = false;
         #endregion
         #region To Life and Die in starlight
 
-        public DeviceMonitor(Window window, DeviceNotification.DBTDeviceType deviceType)
+        public DeviceMonitor(Window window, DeviceNotification.DbtDeviceType deviceType)
         {
             m_DeviceType = deviceType;
             m_FilterByType = true;
@@ -62,15 +62,15 @@ namespace Aurora.Wpf.Device
         /// </summary>
         private IntPtr HwndHandler(IntPtr hwnd, int msg, IntPtr wparam, IntPtr lparam, ref bool handled)
         {
-            if (msg == DeviceNotification.WmDevicechange)
+            if (msg == DeviceNotification.c_WmDevicechange)
             {
-                DeviceNotification.DBTEventType eventType = (DeviceNotification.DBTEventType)wparam;
+                DeviceNotification.DbtEventType eventType = (DeviceNotification.DbtEventType)wparam;
                 DeviceData device = DeviceNotification.GetDevice(lparam);
                 if (!m_FilterByType || device.DeviceType == m_DeviceType)
                 {
-                    if (eventType == DeviceNotification.DBTEventType.Arrival)
+                    if (eventType == DeviceNotification.DbtEventType.Arrival)
                         OnDeviceArrival(device);
-                    else if (eventType == DeviceNotification.DBTEventType.RemoveComplete)
+                    else if (eventType == DeviceNotification.DbtEventType.RemoveComplete)
                         OnDeviceRemoval(device);
                 }
             }

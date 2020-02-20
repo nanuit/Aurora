@@ -2,7 +2,7 @@
 {
     public class DeviceData
     {
-            public DeviceNotification.DBTDeviceType DeviceType { get; set; } = DeviceNotification.DBTDeviceType.Oem;
+            public DeviceNotification.DbtDeviceType DeviceType { get; set; } = DeviceNotification.DbtDeviceType.Oem;
             public string Data { get; set; } = string.Empty;
             
             public DeviceData()

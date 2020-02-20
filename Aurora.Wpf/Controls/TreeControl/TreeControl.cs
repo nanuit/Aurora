@@ -110,8 +110,8 @@ namespace Aurora.Wpf.Controls.TreeControl
         }
         private static void OnSelectedIndexChanged(DependencyObject Object, DependencyPropertyChangedEventArgs e)
         {
-            TreeControl TreeControl = (TreeControl)Object;
-            TreeControl.SelectIndex(TreeControl.SelectedIndex);
+            TreeControl treeControl = (TreeControl)Object;
+            treeControl.SelectIndex(treeControl.SelectedIndex);
         }
 
         #endregion
@@ -142,25 +142,25 @@ namespace Aurora.Wpf.Controls.TreeControl
 
         #region Methods
 
-        public void SetSelectedIndex(params int[] Values)
+        public void SetSelectedIndex(params int[] values)
         {
-            string Temp = string.Empty;
-            foreach (int i in Values) Temp += i.ToString() + ",";
-            Temp = Temp.TrimEnd(',');
-            this.SelectedIndex = Temp;
+            string temp = string.Empty;
+            foreach (int i in values) temp += i.ToString() + ",";
+            temp = temp.TrimEnd(',');
+            this.SelectedIndex = temp;
         }
 
-        List<int> GetIndices(string Index)
+        List<int> GetIndices(string index)
         {
-            if (!string.IsNullOrEmpty(Index))
+            if (!string.IsNullOrEmpty(index))
             {
-                List<int> Values = new List<int>();
-                string[] OldValues = Index.Split(',');
+                List<int> values = new List<int>();
+                string[] oldValues = index.Split(',');
                 try
                 {
-                    for (int i = 0, Count = OldValues.Count(); i < Count; i++)
-                        Values.Add(Convert.ToInt32(OldValues[i]));
-                    return Values;
+                    for (int i = 0, count = oldValues.Count(); i < count; i++)
+                        values.Add(Convert.ToInt32(oldValues[i]));
+                    return values;
                 }
                 catch
                 {
@@ -173,29 +173,29 @@ namespace Aurora.Wpf.Controls.TreeControl
         /// <summary>
         /// An array that represents the index depth.
         /// </summary>
-        /// <param name="Index">0-based index.</param>
-        void SelectIndex(string Index)
+        /// <param name="index">0-based index.</param>
+        void SelectIndex(string index)
         {
             if (this.TreeView == null) return;
-            List<int> Values = this.GetIndices(Index);
-            if (Values == null) return;
-            TreeItem Target = null;
-            foreach (int i in Values)
+            List<int> values = this.GetIndices(index);
+            if (values == null) return;
+            TreeItem target = null;
+            foreach (int i in values)
             {
-                if (Target == null)
+                if (target == null)
                 {
                     if (this.TreeView.Items.Count > i)
-                        Target = this.TreeView.Items[i] as TreeItem; //Can never be null; guarentees Target != null after first pass or breaks.
+                        target = this.TreeView.Items[i] as TreeItem; //Can never be null; guarentees Target != null after first pass or breaks.
                     else break;
                 }
                 else
                 {
-                    if (Target.Items.Count > i)
-                        Target = Target.Items[i];
+                    if (target.Items.Count > i)
+                        target = target.Items[i];
                     else break;
                 }
             }
-            if (Target != null) Target.IsSelected = true;
+            if (target != null) target.IsSelected = true;
         }
 
         #endregion

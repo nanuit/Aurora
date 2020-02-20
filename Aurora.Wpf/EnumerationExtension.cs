@@ -7,7 +7,7 @@ namespace Aurora.Wpf
 {
     public class EnumerationExtension : MarkupExtension
     {
-        private Type _enumType;
+        private Type m_EnumType;
 
 
         public EnumerationExtension(Type enumType)
@@ -20,10 +20,10 @@ namespace Aurora.Wpf
 
         public Type EnumType
         {
-            get { return _enumType; }
+            get { return m_EnumType; }
             private set
             {
-                if (_enumType == value)
+                if (m_EnumType == value)
                     return;
 
                 var enumType = Nullable.GetUnderlyingType(value) ?? value;
@@ -31,7 +31,7 @@ namespace Aurora.Wpf
                 if (enumType.IsEnum == false)
                     throw new ArgumentException("Type must be an Enum.");
 
-                _enumType = value;
+                m_EnumType = value;
             }
         }
 

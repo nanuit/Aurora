@@ -5,7 +5,7 @@ namespace Aurora.Wpf.Device
 {
     public static class DeviceNotification
     {
-        public enum DBTDeviceType
+        public enum DbtDeviceType
         {
             DeviceInterface = 5,
             Handle = 6,
@@ -14,7 +14,7 @@ namespace Aurora.Wpf.Device
             Volume = 2
         }
 
-        public enum DBTEventType
+        public enum DbtEventType
         {
             Arrival = 0x8000,
             RemoveComplete = 0x8004,
@@ -22,7 +22,7 @@ namespace Aurora.Wpf.Device
             TypeSpecific = 0x8005
         }
 
-        public enum DBTF
+        public enum Dbtf
         {
             Media = 1,
             Net = 2
@@ -31,12 +31,12 @@ namespace Aurora.Wpf.Device
         //https://msdn.microsoft.com/en-us/library/aa363480(v=vs.85).aspx
         
         
-        public const int WmDevicechange = 0x0219; // device change event      
+        public const int c_WmDevicechange = 0x0219; // device change event      
         
         
         //https://msdn.microsoft.com/en-us/library/aa363431(v=vs.85).aspx
-        private const int DEVICE_NOTIFY_ALL_INTERFACE_CLASSES = 4;
-        private static readonly Guid GuidDevinterfaceUSBDevice = new Guid("A5DCBF10-6530-11D2-901F-00C04FB951ED"); // USB devices
+        private const int c_Device_Notify_All_Interface_Classes = 4;
+        private static readonly Guid GuidDevinterfaceUsbDevice = new Guid("A5DCBF10-6530-11D2-901F-00C04FB951ED"); // USB devices
         private static IntPtr m_NotificationHandle;
 
         /// <summary>
@@ -46,11 +46,11 @@ namespace Aurora.Wpf.Device
         /// <param name="usbOnly">true to filter to USB devices only, false to be notified for all devices.</param>
         public static void RegisterDeviceNotification(IntPtr windowHandle, bool usbOnly = false)
         {
-            var dbi = new DEV_BROADCAST_DEVICEINTERFACE_FIXED()
+            var dbi = new DevBroadcastDeviceinterfaceFixed()
             {
-                Devicetype = (int)DBTDeviceType.DeviceInterface,
+                Devicetype = (int)DbtDeviceType.DeviceInterface,
                 Reserved = 0,
-                Classguid = GuidDevinterfaceUSBDevice,
+                Classguid = GuidDevinterfaceUsbDevice,
                 Name = (char)0
             };
             
@@ -58,7 +58,7 @@ namespace Aurora.Wpf.Device
             IntPtr buffer = Marshal.AllocHGlobal(dbi.Size);
             Marshal.StructureToPtr(dbi, buffer, true);
 
-            m_NotificationHandle = RegisterDeviceNotification(windowHandle, buffer, usbOnly ? 0 : DEVICE_NOTIFY_ALL_INTERFACE_CLASSES);
+            m_NotificationHandle = RegisterDeviceNotification(windowHandle, buffer, usbOnly ? 0 : c_Device_Notify_All_Interface_Classes);
         }
 
         /// <summary>
@@ -75,19 +75,19 @@ namespace Aurora.Wpf.Device
             if ((int)lParam == 0)
                 return itemData;
             
-            DEV_BROADCAST_HDR hdr = new DEV_BROADCAST_HDR();
+            DevBroadcastHdr hdr = new DevBroadcastHdr();
             Marshal.PtrToStructure(lParam, hdr);
-            itemData.DeviceType = ((DBTDeviceType)hdr.dbch_devicetype);
-            switch ((DBTDeviceType)hdr.dbch_devicetype)
+            itemData.DeviceType = ((DbtDeviceType)hdr.dbch_devicetype);
+            switch ((DbtDeviceType)hdr.dbch_devicetype)
             {
-                case DBTDeviceType.DeviceInterface:
-                    DEV_BROADCAST_DEVICEINTERFACE_VARIABLE devIF = new DEV_BROADCAST_DEVICEINTERFACE_VARIABLE();
+                case DbtDeviceType.DeviceInterface:
+                    DevBroadcastDeviceinterfaceVariable devIf = new DevBroadcastDeviceinterfaceVariable();
 
                     // Convert lparam to DEV_BROADCAST_DEVICEINTERFACE structure
-                    Marshal.PtrToStructure(lParam, devIF);
+                    Marshal.PtrToStructure(lParam, devIf);
 
                     // Get the device path from the broadcast message
-                    itemData.Data = new string(devIF.dbcc_name);
+                    itemData.Data = new string(devIf.dbcc_name);
 
                     // Remove null-terminated data from the string
                     int pos = itemData.Data.IndexOf((char)0);
@@ -96,8 +96,8 @@ namespace Aurora.Wpf.Device
                         itemData.Data = itemData.Data.Substring(0, pos);
                     }
                     break;
-                case DBTDeviceType.Port:
-                    DEV_BROADCAST_PORT_VARIABLE devPort = new DEV_BROADCAST_PORT_VARIABLE();
+                case DbtDeviceType.Port:
+                    DevBroadcastPortVariable devPort = new DevBroadcastPortVariable();
 
                     // Convert lparam to DEV_BROADCAST_DEVICEINTERFACE structure
                     Marshal.PtrToStructure(lParam, devPort);
@@ -112,10 +112,10 @@ namespace Aurora.Wpf.Device
                         itemData.Data = itemData.Data.Substring(0, pos);
                     }
                     break;
-                case DBTDeviceType.Volume:
-                    DEV_BROADCAST_VOLUME volume = new DEV_BROADCAST_VOLUME();
+                case DbtDeviceType.Volume:
+                    DevBroadcastVolume volume = new DevBroadcastVolume();
                     Marshal.PtrToStructure(lParam, volume);
-                    itemData.Data = $"{((volume.dbcv_flags & (int) DBTF.Media) == 1 ? "Media" : "Net")} {FirstDriveFromMask(volume.dbcv_unitmask)}";
+                    itemData.Data = $"{((volume.dbcv_flags & (int) Dbtf.Media) == 1 ? "Media" : "Net")} {FirstDriveFromMask(volume.dbcv_unitmask)}";
                     break;
 
                     
@@ -145,7 +145,7 @@ namespace Aurora.Wpf.Device
         private static extern bool UnregisterDeviceNotification(IntPtr handle);
 
         [StructLayout(LayoutKind.Sequential)]
-        public class DEV_BROADCAST_DEVICEINTERFACE_FIXED
+        public class DevBroadcastDeviceinterfaceFixed
         {
             public int Size;
             public int Devicetype;
@@ -155,7 +155,7 @@ namespace Aurora.Wpf.Device
         }
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
-        public class DEV_BROADCAST_DEVICEINTERFACE_VARIABLE
+        public class DevBroadcastDeviceinterfaceVariable
         {
             public int dbcc_size;
             public int dbcc_devicetype;
@@ -166,14 +166,14 @@ namespace Aurora.Wpf.Device
         }
 
         [StructLayout(LayoutKind.Sequential)]
-        public class DEV_BROADCAST_HDR
+        public class DevBroadcastHdr
         {
             public int dbch_size;
             public int dbch_devicetype;
             public int dbch_reserved;
         }
         [StructLayout(LayoutKind.Sequential)]
-        public class DEV_BROADCAST_PORT_FIXED
+        public class DevBroadcastPortFixed
         {
             public int dbcp_size;
             public int dbcp_devicetype;
@@ -181,7 +181,7 @@ namespace Aurora.Wpf.Device
             public char dbcc_name;
         }
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
-        public class DEV_BROADCAST_PORT_VARIABLE
+        public class DevBroadcastPortVariable
         {
             public int dbcp_size;
             public int dbcp_devicetype;
@@ -190,7 +190,7 @@ namespace Aurora.Wpf.Device
             public char[] dbcc_name;
         }
         [StructLayout(LayoutKind.Sequential)]
-        public class DEV_BROADCAST_VOLUME
+        public class DevBroadcastVolume
         {
             public int dbcv_size;
             public int dbcv_devicetype;
