@@ -11,7 +11,10 @@
     <iconUrl>https://github.com/nanuit/Aurora/blob/master/sunrise.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial package.</releaseNotes>
+    <releaseNotes>
+      Behaviour added
+      ManageWindowState added
+    </releaseNotes>
     <copyright>$copyright$</copyright>
     <tags></tags>
   </metadata>

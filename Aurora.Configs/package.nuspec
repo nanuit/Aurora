@@ -11,7 +11,7 @@
     <iconUrl>https://github.com/nanuit/Aurora/blob/master/sunrise.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Arguments class for handling of commandline Arguments added</releaseNotes>
+    <releaseNotes>Error on storing config in Local Appdata fixed</releaseNotes>
     <copyright>$copyright$</copyright>
     <tags></tags>
   </metadata>

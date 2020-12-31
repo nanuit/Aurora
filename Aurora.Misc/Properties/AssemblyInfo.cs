@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Aurora.Misc")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("miscelaneous classes")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Aurora.Misc")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCompany("nanuit")]
+[assembly: AssemblyProduct("Aurora API")]
+[assembly: AssemblyCopyright("Nanuit(c) 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

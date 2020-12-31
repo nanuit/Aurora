@@ -86,8 +86,27 @@ namespace Aurora.Wpf.Behaviours.WindowState
 
         private void SetState()
         {
+            
             if (!m_State.Stored)
                 return;
+            if (m_State.Height > System.Windows.SystemParameters.VirtualScreenHeight)
+                m_State.Height = System.Windows.SystemParameters.VirtualScreenHeight;
+
+            if (m_State.Width > System.Windows.SystemParameters.VirtualScreenWidth)
+                m_State.Width = System.Windows.SystemParameters.VirtualScreenWidth;
+
+            if (m_State.Top + m_State.Height / 2 > System.Windows.SystemParameters.VirtualScreenHeight)
+                m_State.Top = System.Windows.SystemParameters.VirtualScreenHeight - m_State.Height;
+
+            if (m_State.Left + m_State.Width / 2 > System.Windows.SystemParameters.VirtualScreenWidth)
+                m_State.Left = System.Windows.SystemParameters.VirtualScreenWidth - m_State.Width;
+            
+            if (m_State.Top < 0)
+                m_State.Top = 0;
+
+            if (m_State.Left < 0)
+                m_State.Left = 0;
+
             AssociatedObject.Left = m_State.Left;
             AssociatedObject.Width = m_State.Width;
             AssociatedObject.Top = m_State.Top;
