@@ -84,7 +84,7 @@ namespace Aurora.IO.NamedPipe
                             m_Log.Warn($">> Read Stream");
                             byte[] seBuffer = new byte[1024];
                             readCount = m_Server.Read(seBuffer, 0, seBuffer.Length);
-                            string clientMessage = Encoding.ASCII.GetString(seBuffer, 0, readCount);
+                            string clientMessage = Encoding.UTF8.GetString(seBuffer, 0, readCount);
                             m_Log.Debug($"** Client message completed?{m_Server.IsMessageComplete} {readCount} long -> {clientMessage}#");
                             var clientData = JsonSerializer.DeserializeFromString<T>(clientMessage);
                             m_Log.Debug($"** Client data: {clientData}");

@@ -32,7 +32,7 @@ namespace UnitTestLib
         [TestMethod]
         public void TestClient()
         {
-            ClientSent(@"c:\log\Safe\Ba.Config.log", @"c:\log\Safe\Ba.AdminBroker.log");
+            ClientSent(@"c:\log\Safe\Ba.Configß.log", @"c:\log\Safe\Ba.AdminBrokerä.log");
             Thread.Sleep(3000);
             ClientSent(@"c:\log\Safe\Ba.Config1.log", @"c:\log\Safe\Ba.AdminBroker1.log");
         }

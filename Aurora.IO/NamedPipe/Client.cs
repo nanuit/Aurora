@@ -51,7 +51,7 @@ namespace Aurora.IO.NamedPipe
         {
             m_Log.Warn($">> Send");
             string jsonied = JsonSerializer.SerializeToString<T>(dataToSent);
-            byte[] buffer = Encoding.ASCII.GetBytes(JsonSerializer.SerializeToString<T>(dataToSent));
+            byte[] buffer = Encoding.UTF8.GetBytes(JsonSerializer.SerializeToString<T>(dataToSent));
             m_Log.Trace($"** Send {jsonied}");
             m_Client.Write(buffer, 0, buffer.Length);//Write(JsonSerializer.SerializeToString<T>(dataToSent));
             m_Log.Warn($"<< Send");
