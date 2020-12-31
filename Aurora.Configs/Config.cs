@@ -212,7 +212,7 @@ namespace Aurora.Configs
                     folderToUse = Environment.SpecialFolder.ApplicationData;
                     break;
                 case ConfigType.LocalProfile:
-                    folderToUse = Environment.SpecialFolder.ApplicationData;
+                    folderToUse = Environment.SpecialFolder.LocalApplicationData;
                     break;
             }
             string configFilePath = Path.Combine(Environment.GetFolderPath(folderToUse), profilePath);
