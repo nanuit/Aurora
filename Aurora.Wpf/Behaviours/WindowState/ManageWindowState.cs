@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Interactivity;
 using Aurora.Configs;
 
+
 namespace Aurora.Wpf.Behaviours.WindowState
 {
     public class ManagePositions : Behavior<Window>
@@ -44,7 +45,7 @@ namespace Aurora.Wpf.Behaviours.WindowState
         #region Protected Methods
         static void OnActivatedChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {
-            //var behavior = (ManagePositions)dependencyObject;
+            
         }
         static void OnContextChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {   
@@ -52,7 +53,6 @@ namespace Aurora.Wpf.Behaviours.WindowState
         protected override void OnAttached()
         {
             AssociatedObject.Closing += OnClosing;
-            // TODO: SetPosition
             InitConfig();
             SetState();
         }
@@ -64,6 +64,8 @@ namespace Aurora.Wpf.Behaviours.WindowState
 
         void OnClosing(object sender, EventArgs eventArgs)
         {
+            if (!Activated)
+                return;
             InitConfig();
 
             m_State.Height = Math.Round(AssociatedObject.Height);
@@ -78,6 +80,8 @@ namespace Aurora.Wpf.Behaviours.WindowState
         #endregion
         private void InitConfig()
         {
+            if (!Activated)
+                return;
             if (m_Config == null)
                 m_Config = new ConfigJson<StoredWindowState>(ConfigType.LocalProfile, string.IsNullOrEmpty(Context) ? "WindowState" : Context, AssociatedObject.Title);
             if (m_State == null)
@@ -86,8 +90,7 @@ namespace Aurora.Wpf.Behaviours.WindowState
 
         private void SetState()
         {
-            
-            if (!m_State.Stored)
+            if (!Activated || !m_State.Stored)
                 return;
             if (m_State.Height > System.Windows.SystemParameters.VirtualScreenHeight)
                 m_State.Height = System.Windows.SystemParameters.VirtualScreenHeight;

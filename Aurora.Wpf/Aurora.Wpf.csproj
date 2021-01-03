@@ -111,7 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aurora.Configs\Aurora.Configs.csproj">
-      <Project>{c0637cd4-2ef8-4a97-9851-7c95b14732ed}</Project>
+      <Project>{C0637CD4-2EF8-4A97-9851-7C95B14732ED}</Project>
       <Name>Aurora.Configs</Name>
     </ProjectReference>
   </ItemGroup>
