@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3F79B8E-612E-4DBB-90AE-6FD3AC3507D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aurora.Forms</RootNamespace>
+    <AssemblyName>Aurora.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColumnSortListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColumnSortListView.Designer.cs">
+      <DependentUpon>ColumnSortListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlBinding.cs" />
+    <Compile Include="ControlExtensions.cs" />
+    <Compile Include="CustomControls\ColorChanger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ColorChanger.Designer.cs">
+      <DependentUpon>ColorChanger.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomControls\ColorChanger.resx">
+      <DependentUpon>ColorChanger.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CustomControls\GroupBoxWithCheckBoxTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GroupBoxWithCheckBoxTitle.Designer.cs">
+      <DependentUpon>GroupBoxWithCheckBoxTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\GroupedComboBox\BufferedPaint\BufferedPainter.cs" />
+    <Compile Include="CustomControls\GroupedComboBox\BufferedPaint\Interop.cs" />
+    <Compile Include="CustomControls\GroupedComboBox\DropDownControlBase\DropDownControlBase.cs" />
+    <Compile Include="CustomControls\GroupedComboBox\GroupedComboBox\GroupedComboBox.cs" />
+    <Compile Include="CustomControls\RegExpTextBox\EmailTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RegExpTextBox\FormattedRegExpTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RegExpTextBox\RegExpTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\Slider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\Slider.Designer.cs">
+      <DependentUpon>Slider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomDataGrid\ColumnDataDef.cs" />
+    <Compile Include="CustomDataGrid\CustomDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomDataGrid\CustomDataGrid.Worker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomDataGrid\CustomDataGridComboBoxColumn.cs" />
+    <Compile Include="CustomDataGrid\DataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomDataGrid\DataGridEnumComboBoxColumn.cs" />
+    <Compile Include="CustomDataGrid\DataGridViewByteCell.cs" />
+    <Compile Include="CustomDataGrid\DataGridViewByteColumn.cs" />
+    <Compile Include="CustomDataGrid\frmDataInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomDataGrid\frmDataInput.designer.cs">
+      <DependentUpon>frmDataInput.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomControls\GroupBoxWithCheckBoxTitle.resx">
+      <DependentUpon>GroupBoxWithCheckBoxTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\Slider.resx">
+      <DependentUpon>Slider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomDataGrid\frmDataInput.resx">
+      <DependentUpon>frmDataInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="EnumComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="Misc.cs" />
+    <Compile Include="NumericUpDown\Int32NumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NumericUpDown\UInt32NumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="package.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aurora.Math\Aurora.Math.csproj">
+      <Project>{fce0d9f3-6fe9-4c11-be86-cf4b2eeac957}</Project>
+      <Name>Aurora.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
