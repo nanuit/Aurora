@@ -84,7 +84,7 @@ namespace Aurora.Math
                 if (ActUnit.Factor == unit && ActUnit.Base == mathbase)
                     return (ActUnit);
             }
-            return (null);
+            return null;
         }
 
         public class Unit
