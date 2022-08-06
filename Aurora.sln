@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Configs", "Aurora.Configs\Aurora.Configs.csproj", "{C0637CD4-2EF8-4A97-9851-7C95B14732ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Configs", "Aurora.Configs\Aurora.Configs.csproj", "{C0637CD4-2EF8-4A97-9851-7C95B14732ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Crypt", "Aurora.Crypt\Aurora.Crypt.csproj", "{968FF477-AE9F-400E-A91C-1489C0E30AEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Crypt", "Aurora.Crypt\Aurora.Crypt.csproj", "{968FF477-AE9F-400E-A91C-1489C0E30AEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Crypt.Forms", "Aurora.Crypt.Forms\Aurora.Crypt.Forms.csproj", "{028B8930-A4E6-46BD-96EF-48185BC1B607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Crypt.Forms", "Aurora.Crypt.Forms\Aurora.Crypt.Forms.csproj", "{028B8930-A4E6-46BD-96EF-48185BC1B607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.IO", "Aurora.IO\Aurora.IO.csproj", "{49D9527D-CC33-4D6B-B634-326ADAF6E3FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.IO", "Aurora.IO\Aurora.IO.csproj", "{49D9527D-CC33-4D6B-B634-326ADAF6E3FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Wpf", "Aurora.Wpf\Aurora.Wpf.csproj", "{0EF9CC52-19EF-4631-BAA2-E48D3443343F}"
 EndProject
@@ -33,9 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Math", "Aurora.Math\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{06DAD3AB-59B7-4D34-BD48-033F4D389D84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.SignalR", "Aurora.SignalR\Aurora.SignalR.csproj", "{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Web", "Aurora.Web\Aurora.Web.csproj", "{5F638A6C-613A-4309-876C-04A8CF0B11AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.SignalR", "Aurora.SignalR\Aurora.SignalR.csproj", "{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Test", "Aurora.Test\Aurora.Test.csproj", "{531D057C-EF4B-4CE0-8CF2-145F05C9AC32}"
 EndProject
@@ -43,7 +41,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.SignalR.FrameConsole
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filetest", "Filetest\Filetest.csproj", "{B3BD416A-D0A8-4BEE-81E8-A18852B8A3B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Forms", "Aurora.Forms\Aurora.Forms.csproj", "{D3F79B8E-612E-4DBB-90AE-6FD3AC3507D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Forms", "Aurora.Forms\Aurora.Forms.csproj", "{D3F79B8E-612E-4DBB-90AE-6FD3AC3507D0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Misc", "Aurora.Misc\Aurora.Misc.csproj", "{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}"
 EndProject
@@ -85,9 +83,6 @@ Global
 		{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F638A6C-613A-4309-876C-04A8CF0B11AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F638A6C-613A-4309-876C-04A8CF0B11AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F638A6C-613A-4309-876C-04A8CF0B11AE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{531D057C-EF4B-4CE0-8CF2-145F05C9AC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{531D057C-EF4B-4CE0-8CF2-145F05C9AC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{531D057C-EF4B-4CE0-8CF2-145F05C9AC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
