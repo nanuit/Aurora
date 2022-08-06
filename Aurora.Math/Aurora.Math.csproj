@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net48;net6.0</TargetFrameworks>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFrameworks>net48;net6.0</TargetFrameworks>    
     <AssemblyName>Aurora.Math</AssemblyName>
     <RootNamespace>Aurora.Math</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>

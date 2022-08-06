@@ -29,11 +29,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{57A5D8
 		Common\NLog.xsd = Common\NLog.xsd
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Math", "Aurora.Math\Aurora.Math.csproj", "{FCE0D9F3-6FE9-4C11-BE86-CF4B2EEAC957}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Math", "Aurora.Math\Aurora.Math.csproj", "{FCE0D9F3-6FE9-4C11-BE86-CF4B2EEAC957}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{06DAD3AB-59B7-4D34-BD48-033F4D389D84}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Misc", "Aurora.Misc\Aurora.Misc.csproj", "{78CDBBCF-4187-48F5-A588-4AB2C0B9CFA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.SignalR", "Aurora.SignalR\Aurora.SignalR.csproj", "{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}"
 EndProject
@@ -47,7 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filetest", "Filetest\Filete
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Forms", "Aurora.Forms\Aurora.Forms.csproj", "{D3F79B8E-612E-4DBB-90AE-6FD3AC3507D0}"
 EndProject
-
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Misc", "Aurora.Misc\Aurora.Misc.csproj", "{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,10 +81,6 @@ Global
 		{06DAD3AB-59B7-4D34-BD48-033F4D389D84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06DAD3AB-59B7-4D34-BD48-033F4D389D84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06DAD3AB-59B7-4D34-BD48-033F4D389D84}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78CDBBCF-4187-48F5-A588-4AB2C0B9CFA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78CDBBCF-4187-48F5-A588-4AB2C0B9CFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78CDBBCF-4187-48F5-A588-4AB2C0B9CFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78CDBBCF-4187-48F5-A588-4AB2C0B9CFA1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -109,10 +104,10 @@ Global
 		{D3F79B8E-612E-4DBB-90AE-6FD3AC3507D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3F79B8E-612E-4DBB-90AE-6FD3AC3507D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3F79B8E-612E-4DBB-90AE-6FD3AC3507D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{299E9F91-D800-4192-8C0D-B677DC51FB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{299E9F91-D800-4192-8C0D-B677DC51FB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{299E9F91-D800-4192-8C0D-B677DC51FB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{299E9F91-D800-4192-8C0D-B677DC51FB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

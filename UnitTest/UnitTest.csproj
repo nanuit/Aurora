@@ -70,7 +70,7 @@
       <Name>Aurora.IO</Name>
     </ProjectReference>
     <ProjectReference Include="..\Aurora.Misc\Aurora.Misc.csproj">
-      <Project>{78cdbbcf-4187-48f5-a588-4ab2c0b9cfa1}</Project>
+      <Project>{9d4f72ba-c266-4e6f-88a4-1b2a8da5e4af}</Project>
       <Name>Aurora.Misc</Name>
     </ProjectReference>
   </ItemGroup>

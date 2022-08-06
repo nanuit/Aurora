@@ -8,6 +8,7 @@ namespace UnitTestLib
     [TestClass]
     public class AuroraMisc
     {
+#if NET48
         [TestMethod]
         public void TestTheme()
         {
@@ -22,5 +23,6 @@ namespace UnitTestLib
         {
             Console.WriteLine("WindowsTheme Changed:{newTheme}");
         }
+#endif
     }
 }
