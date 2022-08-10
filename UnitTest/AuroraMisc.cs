@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Reflection;
 using System.Threading;
 using Aurora.Misc;
+using Aurora.Misc.Application;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestLib
@@ -24,5 +26,13 @@ namespace UnitTestLib
             Console.WriteLine("WindowsTheme Changed:{newTheme}");
         }
 #endif
+        [TestMethod]
+        public void TestCustomBuildDate()
+        {
+            try { var date = Assembly.GetExecutingAssembly().GetCustomAssemblyLinkDate();
+                Console.WriteLine(date.ToString("u"));
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
     }
 }

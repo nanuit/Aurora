@@ -60,6 +60,11 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+    <ItemGroup>
+        <AssemblyAttribute Include="Aurora.Misc.Application.BuildDateAttribute">
+          <_Parameter1>$([System.DateTime]::UtcNow.ToString("u"))</_Parameter1>
+       </AssemblyAttribute>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aurora.Configs\Aurora.Configs.csproj">
       <Project>{C0637CD4-2EF8-4A97-9851-7C95B14732ED}</Project>
