@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Crypt.Forms", "Auror
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.IO", "Aurora.IO\Aurora.IO.csproj", "{49D9527D-CC33-4D6B-B634-326ADAF6E3FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Wpf", "Aurora.Wpf\Aurora.Wpf.csproj", "{0EF9CC52-19EF-4631-BAA2-E48D3443343F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Wpf", "Aurora.Wpf\Aurora.Wpf.csproj", "{0EF9CC52-19EF-4631-BAA2-E48D3443343F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28FA7938-6042-4831-B0DF-7D75512891F3}"
 	ProjectSection(SolutionItems) = preProject
@@ -44,6 +44,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Forms", "Aurora.Forms\Aurora.Forms.csproj", "{D3F79B8E-612E-4DBB-90AE-6FD3AC3507D0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Misc", "Aurora.Misc\Aurora.Misc.csproj", "{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuroraTests", "AuroraTests\AuroraTests.csproj", "{524CBE75-22FB-4A3B-9C87-4A336CBAD051}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,10 @@ Global
 		{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{524CBE75-22FB-4A3B-9C87-4A336CBAD051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{524CBE75-22FB-4A3B-9C87-4A336CBAD051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{524CBE75-22FB-4A3B-9C87-4A336CBAD051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{524CBE75-22FB-4A3B-9C87-4A336CBAD051}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
