@@ -1,5 +1,5 @@
 ﻿using Aurora.IO.NamedPipe;
-namespace UnitTestLib
+namespace AuroraTests
 {
     
     public class AuroraIOTest

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnitTestLib
+namespace AuroraTests
 {
     
     public class AuroraWpf

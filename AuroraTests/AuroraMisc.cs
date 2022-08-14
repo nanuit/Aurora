@@ -5,7 +5,7 @@ using Aurora.Misc;
 using Aurora.Misc.Application;
 
 
-namespace UnitTestLib
+namespace AuroraTests
 {    
     public class AuroraMisc
     {
@@ -28,8 +28,9 @@ namespace UnitTestLib
         [Test]
         public void TestCustomBuildDate()
         {
-            try { var date = Assembly.GetExecutingAssembly().GetCustomAssemblyLinkDate();
-                Console.WriteLine(date.ToString("u"));
+            try {
+                Console.WriteLine($"Utc: {Assembly.GetExecutingAssembly().GetCustomAssemblyLinkDateUtc():yyyy-MM-dd HH:mm:ss}");
+                Console.WriteLine($"Local: {Assembly.GetExecutingAssembly().GetCustomAssemblyLinkDateLocal():yyyy-MM-dd HH:mm:ss}");
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
         }

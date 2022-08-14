@@ -29,7 +29,7 @@ namespace UnitTestLib
         [TestMethod]
         public void TestCustomBuildDate()
         {
-            try { var date = Assembly.GetExecutingAssembly().GetCustomAssemblyLinkDate();
+            try { var date = Assembly.GetExecutingAssembly().GetCustomAssemblyLinkDateUtc();
                 Console.WriteLine(date.ToString("u"));
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }

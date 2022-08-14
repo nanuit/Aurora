@@ -2,7 +2,7 @@
 using Aurora.Configs;
 
 
-namespace UnitTestLib
+namespace AuroraTests
 {    
     public class AuroraConfigsTest
     {
