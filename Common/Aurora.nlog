@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<nlog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" autoReload="true"
-  internalLogFile="c:/log/Nlog.Aurora.log" internalLogLevel="Error">
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" autoReload="true"
+      internalLogFile="c:/log/Nlog.Aurora.log" internalLogLevel="Error">
   <variable name="logDirectory" value="c:/log/Aurora"/>
   <variable name="logBackupDirectory" value="c:/log/Aurora/bak"/>
   <variable name="defaultLayout" value="${date:format=yyyy-MM-dd HH\:mm\:ss\.ffff}|${processid}|${processname:fullName=false}|${threadid}|${level:uppercase=true}|${logger}|${message}"/>
@@ -13,6 +13,6 @@
 				archiveAboveSize="50000000" archiveEvery="None" archiveNumbering="Rolling" maxArchiveFiles="99" encoding="UTF-8" enableArchiveFileCompression="true"/>
   </targets>
   <rules>
-    <logger name="*" minlevel="Trace" writeTo="Common, Console"/>
+    <logger name="Aurora.*" minlevel="Trace" writeTo="Common, Console"/>
   </rules>
 </nlog>

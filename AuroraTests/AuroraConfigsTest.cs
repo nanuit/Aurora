@@ -8,9 +8,9 @@ namespace AuroraTests
     {
         public class TestSettings
         {
-            public string StringParameter { get; set;  }
+            public string? StringParameter { get; set;  }
             public bool BoolParameter { get; set; }
-            public string[] StringArrayParam { get; set; }
+            public string[]? StringArrayParam { get; set; }
         }
         [Test]
         public void TestPortableConfig()

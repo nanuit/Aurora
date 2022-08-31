@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Reflection;
+using System.Text;
 using System.Threading;
-using Aurora.Misc;
+using Aurora.Misc.String;
 using Aurora.Misc.Application;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -33,6 +34,17 @@ namespace UnitTestLib
                 Console.WriteLine(date.ToString("u"));
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+        [TestMethod]
+        public void TestStringExtension()
+        {
+            byte[] byteArray = { 36, 37, 10, 45, 66, 13, 45, 67 };
+            Console.WriteLine ($"byte[]: {byteArray.StringFromByte()}");
+            string byteString = Encoding.UTF8.GetString(byteArray);
+            Console.WriteLine($"back to string{byteString}");
+            Console.WriteLine($"To hex string{byteString.StringFromByte()}");
+            byteString = @"\x3tReddref\x4";
+            Console.WriteLine($"string: {byteString.StringFromByte()}");
         }
     }
 }
