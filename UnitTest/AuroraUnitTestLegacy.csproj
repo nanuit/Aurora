@@ -52,10 +52,8 @@
   <ItemGroup>
     <Compile Include="AuroraIOTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AuroraConfigsTest.cs" />
     <Compile Include="AuroraWpf.cs" />
     <Compile Include="AuroraMisc.cs" />
-    <Compile Include="AuroraCrypt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
