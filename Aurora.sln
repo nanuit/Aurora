@@ -31,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{57A5D8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Math", "Aurora.Math\Aurora.Math.csproj", "{FCE0D9F3-6FE9-4C11-BE86-CF4B2EEAC957}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{06DAD3AB-59B7-4D34-BD48-033F4D389D84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuroraUnitTestLegacy", "UnitTest\AuroraUnitTestLegacy.csproj", "{06DAD3AB-59B7-4D34-BD48-033F4D389D84}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.SignalR", "Aurora.SignalR\Aurora.SignalR.csproj", "{9D8357B0-EE21-4FC8-9BD0-B4A094CE4575}"
 EndProject
@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Forms", "Aurora.Form
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Misc", "Aurora.Misc\Aurora.Misc.csproj", "{9D4F72BA-C266-4E6F-88A4-1B2A8DA5E4AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuroraTests", "AuroraTests\AuroraTests.csproj", "{524CBE75-22FB-4A3B-9C87-4A336CBAD051}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuroraUnitTests", "AuroraTests\AuroraUnitTests.csproj", "{524CBE75-22FB-4A3B-9C87-4A336CBAD051}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

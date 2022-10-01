@@ -22,6 +22,7 @@
 	</ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aurora.Configs\Aurora.Configs.csproj" />
+    <ProjectReference Include="..\Aurora.Crypt\Aurora.Crypt.csproj" />
     <ProjectReference Include="..\Aurora.IO\Aurora.IO.csproj" />
     <ProjectReference Include="..\Aurora.Misc\Aurora.Misc.csproj" />
     <ProjectReference Include="..\Aurora.Wpf\Aurora.Wpf.csproj" />

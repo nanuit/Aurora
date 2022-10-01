@@ -6,7 +6,7 @@ using Aurora.IO.NamedPipe;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
-namespace UnitTestLib
+namespace AuroraUnitTestLegacy
 {
     [TestClass]
     public class AuroraIOTest

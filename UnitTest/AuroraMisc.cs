@@ -6,7 +6,7 @@ using Aurora.Misc.String;
 using Aurora.Misc.Application;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestLib
+namespace AuroraUnitTestLegacy
 {
     [TestClass]
     public class AuroraMisc

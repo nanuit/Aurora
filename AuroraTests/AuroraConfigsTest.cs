@@ -1,8 +1,6 @@
-﻿using System;
-using Aurora.Configs;
+﻿using Aurora.Configs;
 
-
-namespace AuroraTests
+namespace AuroraUnitTests
 {    
     public class AuroraConfigsTest
     {

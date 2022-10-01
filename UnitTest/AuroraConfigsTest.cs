@@ -2,7 +2,7 @@
 using Aurora.Configs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestLib
+namespace AuroraUnitTestLegacy
 {
     [TestClass]
     public class AuroraConfigsTest

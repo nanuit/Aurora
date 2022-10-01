@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestLib
+namespace AuroraUnitTestLegacy
 {
     [TestClass]
     public class AuroraWpf

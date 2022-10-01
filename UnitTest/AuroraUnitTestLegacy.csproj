@@ -55,20 +55,25 @@
     <Compile Include="AuroraConfigsTest.cs" />
     <Compile Include="AuroraWpf.cs" />
     <Compile Include="AuroraMisc.cs" />
+    <Compile Include="AuroraCrypt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-    <ItemGroup>
-        <AssemblyAttribute Include="Aurora.Misc.Application.BuildDateAttribute">
-          <_Parameter1>$([System.DateTime]::UtcNow.ToString("u"))</_Parameter1>
-       </AssemblyAttribute>
+  <ItemGroup>
+    <AssemblyAttribute Include="Aurora.Misc.Application.BuildDateAttribute">
+      <_Parameter1>$([System.DateTime]::UtcNow.ToString("u"))</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aurora.Configs\Aurora.Configs.csproj">
       <Project>{C0637CD4-2EF8-4A97-9851-7C95B14732ED}</Project>
       <Name>Aurora.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aurora.Crypt\Aurora.Crypt.csproj">
+      <Project>{968ff477-ae9f-400e-a91c-1489c0e30aec}</Project>
+      <Name>Aurora.Crypt</Name>
     </ProjectReference>
     <ProjectReference Include="..\Aurora.IO\Aurora.IO.csproj">
       <Project>{49d9527d-cc33-4d6b-b634-326adaf6e3fb}</Project>
