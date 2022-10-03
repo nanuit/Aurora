@@ -50,6 +50,5 @@ public class AuroraIoTest
         foreach (var element in message)
             Console.WriteLine(element);
     }
-
 }
 
