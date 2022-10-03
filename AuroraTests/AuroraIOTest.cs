@@ -1,4 +1,7 @@
 ﻿using Aurora.IO.NamedPipe;
+using Aurora.IO;
+using System.Xml.Linq;
+
 namespace AuroraUnitTests;
 
 
@@ -49,6 +52,13 @@ public class AuroraIoTest
     {
         foreach (var element in message)
             Console.WriteLine(element);
+    }
+    [Test]
+    public void TestDirectory()
+    {
+        string directory = "c:\\temp\\dummy\\zut";
+        if (Aurora.IO.Directory.EnsureDirectory(directory))
+            Console.WriteLine($"directory {directory} created");
     }
 }
 
