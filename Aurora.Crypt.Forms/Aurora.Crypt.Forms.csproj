@@ -13,7 +13,8 @@
 	<Description>encryption forms using Aurora.Crypt library</Description>
 	<Copyright>Nanuit(c) 2022</Copyright>
 	<PackageIcon>nuget.png</PackageIcon>
-	<PackageReleaseNotes>projectfile converted to VS2022</PackageReleaseNotes>	
+	<PackageReleaseNotes>projectfile converted to VS2022</PackageReleaseNotes>
+	<Nullable>enable</Nullable>	
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

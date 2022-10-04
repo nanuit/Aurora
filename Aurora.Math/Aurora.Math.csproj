@@ -15,6 +15,7 @@
 		<PackageIcon>nuget.png</PackageIcon>
 		<PackageReleaseNotes>Added .net5.0 support</PackageReleaseNotes>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
