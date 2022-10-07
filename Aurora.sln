@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Misc", "Aurora.Misc\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuroraUnitTests", "AuroraTests\AuroraUnitTests.csproj", "{524CBE75-22FB-4A3B-9C87-4A336CBAD051}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurora.Wpf.Core", "Aurora.Wpf.Core\Aurora.Wpf.Core.csproj", "{19414814-34F0-45F3-A784-50A2ED235406}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +111,10 @@ Global
 		{524CBE75-22FB-4A3B-9C87-4A336CBAD051}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{524CBE75-22FB-4A3B-9C87-4A336CBAD051}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{524CBE75-22FB-4A3B-9C87-4A336CBAD051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19414814-34F0-45F3-A784-50A2ED235406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19414814-34F0-45F3-A784-50A2ED235406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19414814-34F0-45F3-A784-50A2ED235406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19414814-34F0-45F3-A784-50A2ED235406}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

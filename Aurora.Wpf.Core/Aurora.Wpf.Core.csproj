@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<AssemblyName>Aurora.Wpf.Core</AssemblyName>
+		<RootNamespace>Aurora.Wpf.Core</RootNamespace>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Authors>Nanuit</Authors>
+		<Description>wpf controls enhancements</Description>
+		<Copyright>Nanuit(c) 2022</Copyright>
+		<PackageIcon>nuget.png</PackageIcon>
+		<PackageReleaseNotes>Init Package</PackageReleaseNotes>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Behaviours\**" />
+	  <EmbeddedResource Remove="Behaviours\**" />
+	  <None Remove="Behaviours\**" />
+	  <Page Remove="Behaviours\**" />
+	</ItemGroup>
+	<!--<ItemGroup>
+		<Page Include="Controls\Numeric\NumericUpDown.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<SubType>Designer</SubType>
+		</Page>
+	</ItemGroup>-->
+	<ItemGroup>
+		<None Include="..\Common\nuget.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Aurora.Configs\Aurora.Configs.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Controls\Numeric\NumericUpDown.xaml.cs">
+	    <DependentUpon>NumericUpDown.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+</Project>
