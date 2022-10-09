@@ -7,7 +7,7 @@ namespace Aurora.Wpf.Core
     public class ViewModelBase : INotifyPropertyChanged
     {
         #region INotifyPropertyChange
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
         
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
@@ -29,7 +29,5 @@ namespace Aurora.Wpf.Core
                     Debug.Fail(msg);
             }
         }
-
-
     }
 }

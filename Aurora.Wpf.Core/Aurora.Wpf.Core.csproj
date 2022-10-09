@@ -12,10 +12,10 @@
 		<UseWPF>true</UseWPF>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Authors>Nanuit</Authors>
-		<Description>namespce corrected and ENumeratrionExtension moved to Aurora.Misc</Description>
+		<Description>wpf controls enhancements</Description>
 		<Copyright>Nanuit(c) 2022</Copyright>
 		<PackageIcon>nuget.png</PackageIcon>
-		<PackageReleaseNotes>Init Package</PackageReleaseNotes>
+		<PackageReleaseNotes>namespace corrected</PackageReleaseNotes>
 		<GenerateDocumentationFile>false</GenerateDocumentationFile>
 	</PropertyGroup>
 
