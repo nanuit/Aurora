@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Aurora.Wpf.Device
+namespace Aurora.Wpf.Core.Device
 {
     public static class DeviceNotification
     {

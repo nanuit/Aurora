@@ -27,7 +27,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Aurora.Wpf.Controls.Numeric
+namespace Aurora.Wpf.Core.Controls.Numeric
 {
     /// <summary>
     /// Interaction logic for NumericBox.xaml

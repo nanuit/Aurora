@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Aurora.Wpf
+namespace Aurora.Wpf.Core
 {
     public class AutoScrollListBox : ListBox
     {

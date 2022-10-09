@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Interop;
 
-namespace Aurora.Wpf.Device
+namespace Aurora.Wpf.Core.Device
 {
     public class DeviceMonitor : IDisposable
     {

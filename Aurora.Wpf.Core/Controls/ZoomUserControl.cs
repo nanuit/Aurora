@@ -5,7 +5,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 
-namespace Aurora.Wpf.Controls
+namespace Aurora.Wpf.Core.Controls
 {
     public class ZoomUserControl : UserControl
     {

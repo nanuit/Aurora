@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Input;
 
-namespace Aurora.Wpf
+namespace Aurora.Wpf.Core
 {
     public class RelayCommand : ICommand
     {

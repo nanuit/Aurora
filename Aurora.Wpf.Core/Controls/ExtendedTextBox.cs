@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Aurora.Wpf.Controls
+namespace Aurora.Wpf.Core.Controls
 {
     public class ExtendedTextBox :TextBox
     {

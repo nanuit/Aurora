@@ -5,14 +5,14 @@
 		<AssemblyName>Aurora.Wpf.Core</AssemblyName>
 		<RootNamespace>Aurora.Wpf.Core</RootNamespace>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<VersionPrefix>1.0.0</VersionPrefix>
+		<VersionPrefix>1.0.1</VersionPrefix>
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<Nullable>enable</Nullable>
 		<UseWPF>true</UseWPF>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Authors>Nanuit</Authors>
-		<Description>wpf controls enhancements</Description>
+		<Description>namespce corrected and ENumeratrionExtension moved to Aurora.Misc</Description>
 		<Copyright>Nanuit(c) 2022</Copyright>
 		<PackageIcon>nuget.png</PackageIcon>
 		<PackageReleaseNotes>Init Package</PackageReleaseNotes>

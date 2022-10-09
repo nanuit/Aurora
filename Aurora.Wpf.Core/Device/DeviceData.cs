@@ -1,4 +1,4 @@
-﻿namespace Aurora.Wpf.Device
+﻿namespace Aurora.Wpf.Core.Device
 {
     public class DeviceData
     {

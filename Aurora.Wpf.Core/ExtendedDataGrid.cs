@@ -7,7 +7,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace Aurora.Wpf
+namespace Aurora.Wpf.Core
 {
     public class ExtendedDataGrid : DataGrid
     {

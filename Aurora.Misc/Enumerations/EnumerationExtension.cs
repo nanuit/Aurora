@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows.Markup;
 
-namespace Aurora.Wpf
+namespace Aurora.Misc.Enumerations
 {
     public class EnumerationExtension : MarkupExtension
     {
@@ -12,15 +12,12 @@ namespace Aurora.Wpf
 
         public EnumerationExtension(Type enumType)
         {
-            if (enumType == null)
-                throw new ArgumentNullException("enumType");
-
-            EnumType = enumType;
+            EnumType = enumType ?? throw new ArgumentNullException("enumType");
         }
 
         public Type EnumType
         {
-            get { return m_EnumType; }
+            get => m_EnumType;
             private set
             {
                 if (m_EnumType == value)
@@ -44,21 +41,19 @@ namespace Aurora.Wpf
                 select new EnumerationMember
                 {
                     Value = enumValue,
-                    Description = GetDescription(enumValue)
+                    Description = GetDescription(enumValue) ?? string.Empty
                 }).ToArray();
         }
 
-        private string GetDescription(object enumValue)
+        private string? GetDescription(object enumValue)
         {
-            var descriptionAttribute = EnumType
-                .GetField(enumValue.ToString())
-                .GetCustomAttributes(typeof(DescriptionAttribute), false)
-                .FirstOrDefault() as DescriptionAttribute;
-
-
-            return descriptionAttribute != null
+            if (enumValue == null)
+                throw new ArgumentNullException("enumValue");
+            var fieldInfo = EnumType.GetField(enumValue.ToString()!);
+            string? retVal = fieldInfo?.GetCustomAttributes(typeof(DescriptionAttribute), false).FirstOrDefault() is DescriptionAttribute descriptionAttribute
                 ? descriptionAttribute.Description
                 : enumValue.ToString();
+            return retVal;
         }
 
         public class EnumerationMember

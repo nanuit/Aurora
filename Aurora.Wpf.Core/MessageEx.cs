@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Aurora.Wpf
+namespace Aurora.Wpf.Core
 {
     public class MessageEx
     {
