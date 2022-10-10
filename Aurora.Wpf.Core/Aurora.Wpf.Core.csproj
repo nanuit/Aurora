@@ -15,22 +15,9 @@
 		<Description>wpf controls enhancements</Description>
 		<Copyright>Nanuit(c) 2022</Copyright>
 		<PackageIcon>nuget.png</PackageIcon>
-		<PackageReleaseNotes>namespace corrected</PackageReleaseNotes>
+		<PackageReleaseNotes>namespace corrected, Managed WindowsState enabled</PackageReleaseNotes>
 		<GenerateDocumentationFile>false</GenerateDocumentationFile>
 	</PropertyGroup>
-
-	<!--<ItemGroup>
-	  <Compile Remove="Behaviours\**" />
-	  <EmbeddedResource Remove="Behaviours\**" />
-	  <None Remove="Behaviours\**" />
-	  <Page Remove="Behaviours\**" />
-	</ItemGroup>-->
-	<!--<ItemGroup>
-		<Page Include="Controls\Numeric\NumericUpDown.xaml">
-			<Generator>MSBuild:Compile</Generator>
-			<SubType>Designer</SubType>
-		</Page>
-	</ItemGroup>-->
 	<ItemGroup>
 		<None Include="..\Common\nuget.png">
 			<Pack>True</Pack>
@@ -43,10 +30,4 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Aurora.Configs\Aurora.Configs.csproj" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Compile Update="Controls\Numeric\NumericUpDown.xaml.cs">
-	    <DependentUpon>NumericUpDown.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
 </Project>
