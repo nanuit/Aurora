@@ -16,7 +16,7 @@
 		<Copyright>Nanuit(c) 2022</Copyright>
 		<PackageIcon>nuget.png</PackageIcon>
 		<PackageReleaseNotes>namespace corrected, Managed WindowsState enabled</PackageReleaseNotes>
-		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="..\Common\nuget.png">

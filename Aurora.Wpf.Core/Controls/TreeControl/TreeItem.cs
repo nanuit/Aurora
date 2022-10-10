@@ -1,6 +1,4 @@
-﻿///  TreeView Control with ContentItems
-///  from https://www.codeproject.com/tips/1096924/tabcontrol-with-treeview-navigation
-/// 
+﻿
 
 using System;
 using System.Collections.ObjectModel;
@@ -10,6 +8,10 @@ using System.Windows.Markup;
 
 namespace Aurora.Wpf.Core.Controls.TreeControl
 {
+    /// <summary>
+    /// TreeView Control with ContentItems
+    ///  from https://www.codeproject.com/tips/1096924/tabcontrol-with-treeview-navigation
+    /// </summary>
     [ContentProperty("Items")]
     public class TreeItem : ItemsControl
     {

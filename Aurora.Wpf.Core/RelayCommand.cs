@@ -4,6 +4,9 @@ using System.Windows.Input;
 
 namespace Aurora.Wpf.Core
 {
+    /// <summary>
+    /// Class to implement the command execution for MVVM
+    /// </summary>
     public class RelayCommand : ICommand
     {
         #region Fields
@@ -12,12 +15,23 @@ namespace Aurora.Wpf.Core
         #endregion // Fields 
         #region Constructors
 
+        /// <summary>
+        /// create an instance for command execution
+        /// </summary>
+        /// <param name="execute">Action to be executed</param>
+        /// <param name="canExecute">Predicate to determine if the command can be executed</param>
+        /// <exception cref="ArgumentNullException">execute parameter cannot be null</exception>
         public RelayCommand(Action<object> execute, Predicate<object>? canExecute = null)
         {
             m_Execute = execute ?? throw new ArgumentNullException(nameof(execute)); m_CanExecute = canExecute;
         }
-        #endregion // Constructors 
+        #endregion 
         #region ICommand Members 
+        /// <summary>
+        /// invoke the Predicate to determine if the command can be executed
+        /// </summary>
+        /// <param name="parameter">parameter to pass to predicate</param>
+        /// <returns></returns>
         [DebuggerStepThrough]
         public bool CanExecute(object? parameter)
         {
@@ -28,6 +42,10 @@ namespace Aurora.Wpf.Core
             add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;
         }
+        /// <summary>
+        /// Invoke the execution command
+        /// </summary>
+        /// <param name="parameter">parameter to pass to execution action</param>
         public void Execute(object? parameter)
         {
             if (parameter != null) m_Execute?.Invoke(parameter);
