@@ -19,12 +19,12 @@
 		<GenerateDocumentationFile>false</GenerateDocumentationFile>
 	</PropertyGroup>
 
-	<ItemGroup>
+	<!--<ItemGroup>
 	  <Compile Remove="Behaviours\**" />
 	  <EmbeddedResource Remove="Behaviours\**" />
 	  <None Remove="Behaviours\**" />
 	  <Page Remove="Behaviours\**" />
-	</ItemGroup>
+	</ItemGroup>-->
 	<!--<ItemGroup>
 		<Page Include="Controls\Numeric\NumericUpDown.xaml">
 			<Generator>MSBuild:Compile</Generator>
@@ -36,6 +36,9 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Aurora.Configs\Aurora.Configs.csproj" />

@@ -1,4 +1,4 @@
-﻿namespace Aurora.Wpf.Behaviours.WindowState
+﻿namespace Aurora.Wpf.Core.Behaviors.WindowState
 {
     public class StoredWindowState
     {

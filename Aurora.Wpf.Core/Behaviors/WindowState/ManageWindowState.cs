@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Interactivity;
 using Aurora.Configs;
+using Microsoft.Xaml.Behaviors;
 
-
-namespace Aurora.Wpf.Behaviours.WindowState
+namespace Aurora.Wpf.Core.Behaviors.WindowState
 {
     public class ManagePositions : Behavior<Window>
     {
         #region Private Members
-        private StoredWindowState m_State;
-        private ConfigJson<StoredWindowState> m_Config;
+        private StoredWindowState? m_State;
+        private ConfigJson<StoredWindowState>? m_Config;
         #endregion
         public static readonly DependencyProperty ActivatedProperty =
             DependencyProperty.Register(
@@ -82,10 +81,8 @@ namespace Aurora.Wpf.Behaviours.WindowState
         {
             if (!Activated)
                 return;
-            if (m_Config == null)
-                m_Config = new ConfigJson<StoredWindowState>(ConfigType.LocalProfile, string.IsNullOrEmpty(Context) ? "WindowState" : Context, AssociatedObject.Title);
-            if (m_State == null)
-                m_State = m_Config.Load();
+            m_Config ??= new ConfigJson<StoredWindowState>(ConfigType.LocalProfile, string.IsNullOrEmpty(Context) ? "WindowState" : Context, AssociatedObject.Title);
+            m_State ??= m_Config.Load();
         }
 
         private void SetState()
