@@ -25,7 +25,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,7 +34,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Interactions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -107,7 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aurora.Wpf\Aurora.Wpf.csproj">
-      <Project>{0ef9cc52-19ef-4631-baa2-e48d3443343f}</Project>
+      <Project>{19414814-34f0-45f3-a784-50a2ed235406}</Project>
       <Name>Aurora.Wpf</Name>
     </ProjectReference>
   </ItemGroup>

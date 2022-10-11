@@ -5,11 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Aurora.Wpf;
 
+
 namespace Aurora.Test.Model
 {
     public class MainViewViM : ViewModelBase
     {
         private bool m_StoreWindowState = true;
+        private RelayCommand m_RelayCommand;
+        
+        public RelayCommand ReloadCommand => this.m_RelayCommand ?? (this.m_RelayCommand = new RelayCommand(ReloadCommandMethod, null));
 
         public bool StoreWindowState
         {
@@ -20,5 +24,11 @@ namespace Aurora.Test.Model
                 OnPropertyChanged();
             }
         }
+
+        private void ReloadCommandMethod(object parameter)
+        {
+            
+        }
+
     }
 }
