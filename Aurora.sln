@@ -15,7 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		License.txt = License.txt
-		nuget.ps1 = nuget.ps1
 		README.md = README.md
 		sunrise.png = sunrise.png
 	EndProjectSection
@@ -69,10 +68,6 @@ Global
 		{49D9527D-CC33-4D6B-B634-326ADAF6E3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49D9527D-CC33-4D6B-B634-326ADAF6E3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49D9527D-CC33-4D6B-B634-326ADAF6E3FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EF9CC52-19EF-4631-BAA2-E48D3443343F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EF9CC52-19EF-4631-BAA2-E48D3443343F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EF9CC52-19EF-4631-BAA2-E48D3443343F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EF9CC52-19EF-4631-BAA2-E48D3443343F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FCE0D9F3-6FE9-4C11-BE86-CF4B2EEAC957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FCE0D9F3-6FE9-4C11-BE86-CF4B2EEAC957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCE0D9F3-6FE9-4C11-BE86-CF4B2EEAC957}.Release|Any CPU.ActiveCfg = Release|Any CPU
