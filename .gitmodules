@@ -1,3 +1,3 @@
-[submodule "Aurora.IO/Aurora.IO"]
-	path = Aurora.IO/Aurora.IO
+[submodule "Aurora.IO"]
+	path = Aurora.IO
 	url = https://github.com/nanuit/Aurora.IO.git
