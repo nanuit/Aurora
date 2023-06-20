@@ -22,3 +22,6 @@
 [submodule "Aurora.Forms"]
 	path = Aurora.Forms
 	url = https://github.com/nanuit/Aurora.Forms.git
+[submodule "Aurora.SignalR"]
+	path = Aurora.SignalR
+	url = https://github.com/nanuit/Aurora.SignalR.git
