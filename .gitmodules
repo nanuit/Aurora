@@ -10,3 +10,12 @@
 [submodule "Aurora.Wpf"]
 	path = Aurora.Wpf
 	url = https://github.com/nanuit/Aurora.Wpf.git
+[submodule "Aurora.Crypt.Forms"]
+	path = Aurora.Crypt.Forms
+	url = https://github.com/nanuit/Aurora.Crypt.Forms.git
+[submodule "Aurora.Crypt"]
+	path = Aurora.Crypt
+	url = https://github.com/nanuit/Aurora.Crypt.git
+[submodule "Aurora.MAth"]
+	path = Aurora.MAth
+	url = https://github.com/nanuit/Aurora.MAth.git
