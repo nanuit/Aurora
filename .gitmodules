@@ -22,3 +22,6 @@
 [submodule "Aurora.SignalR"]
 	path = Aurora.SignalR
 	url = https://github.com/nanuit/Aurora.SignalR.git
+[submodule "Aurora.Math"]
+	path = Aurora.Math
+	url = https://github.com/nanuit/Aurora.Math.git
