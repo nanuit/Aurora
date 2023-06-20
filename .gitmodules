@@ -1,3 +1,12 @@
 [submodule "Aurora.IO"]
 	path = Aurora.IO
 	url = https://github.com/nanuit/Aurora.IO.git
+[submodule "Aurora.Configs"]
+	path = Aurora.Configs
+	url = https://github.com/nanuit/Aurora.Configs.git
+[submodule "Aurora.Misc"]
+	path = Aurora.Misc
+	url = https://github.com/nanuit/Aurora.Misc.git
+[submodule "Aurora.Wpf"]
+	path = Aurora.Wpf
+	url = https://github.com/nanuit/Aurora.Wpf.git
