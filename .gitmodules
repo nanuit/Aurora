@@ -17,5 +17,8 @@
 	path = Aurora.Crypt
 	url = https://github.com/nanuit/Aurora.Crypt.git
 [submodule "Aurora.Math"]
-	path = Aurora.MAth
-	url = https://github.com/nanuit/Aurora.MAth.git
+	path = Aurora.Math
+	url = https://github.com/nanuit/Aurora.Math.git
+[submodule "Aurora.Forms"]
+	path = Aurora.Forms
+	url = https://github.com/nanuit/Aurora.Forms.git
